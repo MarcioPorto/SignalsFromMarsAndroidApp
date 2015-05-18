@@ -1,12 +1,12 @@
-package com.marcioporto.interactivestory;
+package com.marcioporto.interactivestory.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import com.marcioporto.interactivestory.R;
+import com.marcioporto.interactivestory.model.Page;
 
 public class StoryActivity extends Activity {
 
@@ -18,7 +18,7 @@ public class StoryActivity extends Activity {
         setContentView(R.layout.activity_story);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        String name = intent.getStringExtra(getString(R.string.key_name));
 
         if (name == null) {
             name = "Friend";

@@ -1,14 +1,13 @@
-package com.marcioporto.interactivestory;
+package com.marcioporto.interactivestory.ui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.marcioporto.interactivestory.R;
 
 
 public class MainActivity extends Activity {
@@ -35,7 +34,7 @@ public class MainActivity extends Activity {
 
     private void startStory(String name) {
         Intent intent = new Intent(this, StoryActivity.class);
-        intent.putExtra("name", name);
+        intent.putExtra(getString(R.string.key_name), name);
         startActivity(intent);
     }
 
